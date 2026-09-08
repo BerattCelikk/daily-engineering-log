@@ -1,6 +1,6 @@
-# 📚 Mühendislik Dokümantasyon İndeksi
+# Engineering Index
 
-Kategorilere göre ayrılmış günlük mühendislik notları:
+Categorized technical notes and documentation:
 
 ### 🏷️ Docker
 
