@@ -10,4 +10,3 @@
 <!-- TIL-END -->
 
 ---
-*Bu depo [n8n Automation Pipeline](https://n8n.io) & OpenAI GPT-4o-mini tarafından her sabah otomatik güncellenmektedir.*
