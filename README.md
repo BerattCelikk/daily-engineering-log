@@ -1,12 +1,10 @@
-# 🚀 Daily Engineering Log
+# Engineering Log
 
-> Continuous learning, cloud-native architecture insights, Docker/Kubernetes best practices, and daily technical notes by [Berat Çelik](https://github.com/BerattCelikk).
+A collection of daily production engineering notes, cloud-native architecture patterns, and technical references.
 
-## 📌 Son Mühendislik Notları (TIL)
+## Recent Notes
 
 <!-- TIL-START -->
-| Tarih | Başlık | Kategori | Detay |
+| Date | Title | Category | Details |
 | :--- | :--- | :--- | :--- |
 <!-- TIL-END -->
-
----
