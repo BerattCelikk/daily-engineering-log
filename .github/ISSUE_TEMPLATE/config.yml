@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: "💬 Technical Q&A & Community Discussions"
+    url: https://github.com/BerattCelikk/daily-engineering-log/discussions
+    about: "Ask questions, share production benchmarks, or discuss architectural trade-offs."
