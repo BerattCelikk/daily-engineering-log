@@ -19,7 +19,7 @@ echo ""
 # 2. Go Benchmark (if go exists)
 if command -v go &> /dev/null; then
   echo -e "${GREEN}==> Running Go Goroutine Fan-Out & RWMutex Benchmarks...${NC}"
-  go test -bench=. -benchmem ./benchmarks/
+  (cd benchmarks && go test -bench=. -benchmem .)
 else
   echo -e "${CYAN}Go toolchain not detected in local path. (Executed in GitHub Actions runner)${NC}"
 fi
