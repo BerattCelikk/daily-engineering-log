@@ -12,6 +12,7 @@ Categorized technical notes and documentation:
 ### 🏷️ Go
 
 ### 🏷️ PostgreSQL
+- **2026-09-11:** [Optimizing Queries with PostgreSQL Partial Indexes and Analyzing Performance](daily-log/2026-09-11-optimizing-queries-with-postgr-xq1s.md) - *Using partial indexes allows us to optimize query performanc...*
 
 ### 🏷️ Redis
 
