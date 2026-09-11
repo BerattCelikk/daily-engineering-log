@@ -52,3 +52,27 @@ A collection of daily production engineering notes, cloud-native architecture pa
   </a>
 </p>
 
+
+
+## 💻 Interactive Terminal CLI (`daily-log`)
+
+Access daily engineering notes, benchmarks, and architecture diagrams directly from your terminal using the zero-dependency `daily-log` CLI tool:
+
+```bash
+# ⚡ One-liner instant install
+curl -sSL https://raw.githubusercontent.com/BerattCelikk/daily-engineering-log/main/scripts/install.sh | bash
+
+# 🔍 Read today's note directly in your terminal
+daily-log latest
+
+# 🔎 Search notes by keyword
+daily-log search postgresql
+daily-log search docker
+
+# 📚 List all 7 engineering curriculum disciplines
+daily-log categories
+```
+
+## 🏛️ Architecture Decision Records (ADR)
+All fundamental architectural choices are formally documented following the lightweight MADR specification in [**`docs/adr/`**](docs/adr/README.md):
+- [**ADR-001: Standard Cloud-Native Architecture & Container Hardening**](docs/adr/ADR-001-cloud-native-standards.md) (Status: `ACCEPTED ✅`)
