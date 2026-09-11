@@ -4,6 +4,8 @@
 [![Total Notes](https://img.shields.io/badge/Total%20Notes-6-blue?style=flat-square&logo=gitbook)](docs/README.md)
 [![Categories](https://img.shields.io/badge/Categories-7-emerald?style=flat-square&logo=buffer)](docs/README.md)
 [![CI Quality Gate](https://img.shields.io/badge/CI%20Gate-Passing-brightgreen?style=flat-square&logo=githubactions)](.github/workflows/ci.yml)
+[![GHCR Container](https://img.shields.io/badge/GHCR-ghcr.io%2Fberattcelikk%2Fdaily--engineering--log-2496ED?style=flat-square&logo=docker&logoColor=white)](https://github.com/users/BerattCelikk/packages/container/package/daily-engineering-log)
+[![Dependabot](https://img.shields.io/badge/Dependabot-Active-0366d6?style=flat-square&logo=dependabot&logoColor=white)](.github/dependabot.yml)
 [![Daily Engineering](https://img.shields.io/badge/Pipeline-Active-blueviolet?style=flat-square)](https://github.com/BerattCelikk/daily-engineering-log)
 <!-- STATS-END -->
 
@@ -51,7 +53,7 @@ A collection of daily production engineering notes, cloud-native architecture pa
 
 
 
-## 💻 Interactive Terminal CLI (`daily-log`)
+## 💻 Interactive Terminal CLI & OCI Container
 
 Access daily engineering notes, benchmarks, and architecture diagrams directly from your terminal using the zero-dependency `daily-log` CLI tool:
 
