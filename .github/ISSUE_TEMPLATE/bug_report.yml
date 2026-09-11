@@ -1,0 +1,30 @@
+name: "🐛 Bug Report / Technical Correction"
+description: "Report an issue, typo, or syntax bug in an engineering note or code snippet"
+title: "[Fix]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### Found an issue in a code snippet or diagram?
+        Help us maintain 100% production accuracy by detailing the discrepancy.
+  - type: input
+    id: note_path
+    attributes:
+      label: Affected Document Path
+      description: Path to the markdown file in `docs/daily-log/`.
+      placeholder: docs/daily-log/YYYY-MM-DD-topic-name.md
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description of Bug / Expected vs Actual
+      description: Explain what is incorrect and what the correct implementation should be.
+    validations:
+      required: true
+  - type: textarea
+    id: suggested_fix
+    attributes:
+      label: Suggested Code Fix
+      description: Provide the corrected code or diagram syntax.
