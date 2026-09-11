@@ -6,7 +6,7 @@ COPY cmd/eng-cli/main.go .
 RUN CGO_ENABLED=0 GOOS=linux go build -ldflags="-w -s" -o /build/eng-cli main.go
 
 # Minimal runtime image
-FROM alpine:3.20
+FROM alpine:3.24
 
 LABEL org.opencontainers.image.source="https://github.com/BerattCelikk/daily-engineering-log"
 LABEL org.opencontainers.image.description="Cloud & Distributed Systems Engineering Daily Toolkit & CLI"
