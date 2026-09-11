@@ -21,3 +21,7 @@ Categorized technical notes and documentation:
 ### 🏷️ Redis
 
 ### 🏷️ Linux
+
+### 🏷️ Terraform
+
+### 🏷️ CI-CD
