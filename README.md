@@ -1,7 +1,7 @@
 # Engineering Log
 
 <!-- STATS-START -->
-[![Total Notes](https://img.shields.io/badge/Total%20Notes-6-blue?style=flat-square&logo=gitbook)](docs/README.md)
+[![Total Notes](https://img.shields.io/badge/Total%20Notes-7-blue?style=flat-square&logo=gitbook)](docs/README.md)
 [![Categories](https://img.shields.io/badge/Categories-7-emerald?style=flat-square&logo=buffer)](docs/README.md)
 [![CI Quality Gate](https://img.shields.io/badge/CI%20Gate-Passing-brightgreen?style=flat-square&logo=githubactions)](.github/workflows/ci.yml)
 [![GHCR Container](https://img.shields.io/badge/GHCR-ghcr.io%2Fberattcelikk%2Fdaily--engineering--log-2496ED?style=flat-square&logo=docker&logoColor=white)](https://github.com/users/BerattCelikk/packages/container/package/daily-engineering-log)
@@ -16,11 +16,11 @@ A collection of daily production engineering notes, cloud-native architecture pa
 <!-- TIL-START -->
 | Date | Title | Category | Details |
 | :--- | :--- | :--- | :--- |
+| 2026-09-11 | PostgreSQL Indexing: Partial Index | PostgreSQL | [View](docs/daily-log/2026-09-11-postgresql-indexing-partial-in-c15h.md) |
 | 2026-09-11 | PostgreSQL Indexing: Partial Index | PostgreSQL | [View](docs/daily-log/2026-09-11-postgresql-indexing-partial-in-k3je.md) |
 | 2026-09-11 | PostgreSQL Indexing: Partial Index | PostgreSQL | [View](docs/daily-log/2026-09-11-postgresql-indexing-partial-in-6dy0.md) |
 | 2026-09-11 | PostgreSQL Indexing: Partial Index | PostgreSQL | [View](docs/daily-log/2026-09-11-postgresql-indexing-partial-in-xz7t.md) |
 | 2026-09-11 | Optimizing Query Performance with Partial Indexes and Distributed Locks | PostgreSQL | [View](docs/daily-log/2026-09-11-optimizing-query-performance-w-r4eg.md) |
-| 2026-09-11 | Optimizing Queries with PostgreSQL Partial Indexes and Analyzing Performance | PostgreSQL | [View](docs/daily-log/2026-09-11-optimizing-queries-with-postgr-xq1s.md) |
 <!-- TIL-END -->
 
 ## 🎯 Architecture Roadmap & Milestones
