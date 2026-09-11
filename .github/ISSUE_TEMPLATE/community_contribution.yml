@@ -1,0 +1,24 @@
+name: 'Community Contribution Proposal'
+description: 'Propose a cloud-native architecture pattern, benchmark, or engineering note'
+title: '[RFC]: '
+labels: ['good-first-issue', 'help-wanted', 'type/community', 'lifecycle/active']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for contributing to the **Daily Engineering Log**! We welcome community contributions, benchmarks, and architectural notes.
+  - type: input
+    id: topic
+    attributes:
+      label: Technical Topic
+      description: The topic or pattern you are proposing.
+      placeholder: 'e.g. Redis Cluster Sentinel vs Redis Cluster Sharding'
+    validations:
+      required: true
+  - type: textarea
+    id: overview
+    attributes:
+      label: Architectural Rationale
+      description: Why is this pattern significant for production-scale backend systems?
+    validations:
+      required: true
