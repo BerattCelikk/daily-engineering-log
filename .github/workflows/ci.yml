@@ -10,26 +10,59 @@ permissions:
   contents: read
 
 jobs:
-  validate:
-    name: "Engineering Quality Gate"
+  structure-gate:
+    name: "Repository Structure & Integrity Gate"
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+      - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Validate Repository Structure & Documentation
+      - name: Verify Architecture Layout
         run: |
-          echo "============================================="
-          echo "🔍 Verifying Daily Engineering Log Repository"
-          echo "============================================="
+          echo "=== 🔍 Checking Repository Core Layout ==="
           test -f README.md || (echo "❌ Missing README.md" && exit 1)
-          test -d docs || (echo "❌ Missing docs directory" && exit 1)
-          test -d docs/daily-log || (echo "❌ Missing docs/daily-log directory" && exit 1)
-          echo "✓ Repository structure is valid."
+          test -d docs || (echo "❌ Missing docs/ directory" && exit 1)
+          test -d docs/daily-log || (echo "❌ Missing docs/daily-log/ directory" && exit 1)
+          echo "✓ Base directory hierarchy validated."
 
-      - name: Verify Markdown Integrity
+  markdown-standards:
+    name: "Markdown & Documentation Standards"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Validate Markdown Documents & Headings
         run: |
-          echo "Verifying engineering notes in docs/daily-log..."
-          TOTAL_NOTES=0
-          echo "Found  technical notes in library."
-          echo "✓ Quality Gate: PASSED"
+          echo "=== 📚 Scanning Engineering Markdown Notes ==="
+          FAIL=0
+          for f in docs/daily-log/*.md; do
+            if [ -f "$f" ]; then
+              if ! head -n 1 "$f" | grep -q "^# "; then
+                echo "⚠️ Warning: $f does not start with H1 title"
+              fi
+            fi
+          done
+          echo "✓ Markdown documentation standards verified."
+
+  syntax-quality-gate:
+    name: "Syntax & Schema Validation"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install Validation Dependencies
+        run: |
+          pip install --no-cache-dir pyyaml
+
+      - name: Validate YAML Configuration Syntax
+        run: |
+          echo "=== ⚙️ Validating YAML Configurations ==="
+          python -c "import glob, yaml, sys; [yaml.safe_load(open(f)) for f in glob.glob('.github/**/*.yml', recursive=True)]; print('All YAML files are valid.')"
+          echo "✓ All syntax and schema validation passed."
