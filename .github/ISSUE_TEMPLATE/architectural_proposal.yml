@@ -1,0 +1,53 @@
+name: "📐 Architectural Proposal"
+description: "Propose a new system architecture pattern, reference design, or cloud blueprint"
+title: "[Architecture]: "
+labels: ["type/architecture", "complexity/production"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### Thank you for proposing a technical pattern!
+        Please fill in the structured fields below to propose a production-grade pattern.
+  - type: dropdown
+    id: category
+    attributes:
+      label: Technical Discipline
+      description: Select the primary engineering area.
+      options:
+        - Docker & Containers
+        - Kubernetes & Cloud-Native
+        - Go & High-Concurrency
+        - Python & AsyncIO
+        - PostgreSQL & Data Systems
+        - Terraform & Cloud IaC
+        - CI/CD & Observability
+        - Linux & Systems Engineering
+    validations:
+      required: true
+  - type: textarea
+    id: overview
+    attributes:
+      label: Architectural Problem & Rationale
+      description: What production bottleneck or design constraint does this pattern address?
+      placeholder: E.g., High connection overhead under concurrent traffic...
+    validations:
+      required: true
+  - type: textarea
+    id: mermaid
+    attributes:
+      label: Proposed Mermaid Diagram (Optional)
+      description: Flowchart or sequence diagram illustrating the design.
+      placeholder: |
+        ```mermaid
+        flowchart LR
+          Client --> Ingress --> Service --> Pod
+        ```
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Standards Compliance
+      options:
+        - label: This pattern represents production-grade best practices.
+          required: true
+        - label: Code snippet will be runnable and syntax-validated.
+          required: true
