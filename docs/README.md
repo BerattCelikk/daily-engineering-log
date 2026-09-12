@@ -24,5 +24,6 @@ Categorized technical notes and documentation:
 ### 🏷️ Linux
 
 ### 🏷️ Terraform
+- **2026-09-12:** [Terraform Remote S3 State with DynamoDB Lock](daily-log/2026-09-12-terraform-remote-s3-state-with-qfy2.md) - *Securing cloud infrastructure state with encrypted remote st...*
 
 ### 🏷️ CI-CD
