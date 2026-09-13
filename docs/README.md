@@ -27,3 +27,4 @@ Categorized technical notes and documentation:
 - **2026-09-12:** [Terraform Remote S3 State with DynamoDB Lock](daily-log/2026-09-12-terraform-remote-s3-state-with-qfy2.md) - *Securing cloud infrastructure state with encrypted remote st...*
 
 ### 🏷️ CI-CD
+- **2026-09-13:** [GitHub Actions Dependency Cache Optimization](daily-log/2026-09-13-github-actions-dependency-cach-8vnh.md) - *Accelerating continuous integration pipelines by caching ext...*
