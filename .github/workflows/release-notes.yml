@@ -1,0 +1,13 @@
+name: Release Notes
+on:
+  push:
+    tags: ['v*']
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: git log --pretty=format:"- %s" $(git describe --tags --abbrev=0 HEAD^)..HEAD > RELEASE_NOTES.md
+      - uses: softprops/action-gh-release@v1
+        with:
+          body_path: RELEASE_NOTES.md
