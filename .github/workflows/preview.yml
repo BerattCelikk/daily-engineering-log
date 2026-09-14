@@ -1,0 +1,11 @@
+name: Deploy Preview
+on: [pull_request]
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo "Preview at https://${{ github.repository }}-pr-${{ github.event.number }}.surge.sh"
+      - uses: actions/github-script@v7
+        with:
+          script: github.rest.issues.createComment({...context.repo, issue_number: context.issue.number, body: 'Preview: https://'+context.repo.repo+'-pr-'+context.issue.number+'.surge.sh'})
