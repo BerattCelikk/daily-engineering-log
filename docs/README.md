@@ -3,6 +3,7 @@
 Categorized technical notes and documentation:
 
 ### 🏷️ Docker
+- **2026-09-14:** [Docker Layer Caching & Multi-Stage](daily-log/2026-09-14-docker-layer-caching-multi-sta-pzvm.md) - *Optimizing container build times with multi-stage layer sepa...*
 - **2026-09-10:** [Multi-Stage Dockerfile for Lean Images](daily-log/2026-09-10-multi-stage-dockerfile-for-lea-cb8y.md) - *This multi-stage Dockerfile streamlines the build process by...*
 
 ### 🏷️ Kubernetes
