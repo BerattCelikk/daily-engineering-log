@@ -1,0 +1,14 @@
+name: Issue Auto-Close
+on:
+  schedule:
+    - cron: '0 9 * * *'
+jobs:
+  close:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/stale@v9
+        with:
+          days-before-stale: 30
+          days-before-close: 7
+          stale-issue-label: 'stale'
+          close-issue-message: 'Closed due to inactivity.'
