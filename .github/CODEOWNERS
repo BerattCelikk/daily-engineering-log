@@ -1,0 +1,4 @@
+* @BerattCelikk
+/docs/ @BerattCelikk
+*.go @BerattCelikk
+*.py @BerattCelikk
