@@ -1,0 +1,12 @@
+name: Contributors Graph
+on:
+  schedule:
+    - cron: '0 9 * * 1'
+jobs:
+  contrib:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: github/contributors@v1
+        with:
+          repo: BerattCelikk/daily-engineering-log
