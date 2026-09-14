@@ -1,0 +1,10 @@
+name: Branch Cleanup
+on:
+  schedule:
+    - cron: '0 9 * * 0'
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: git branch -r --merged origin/main | grep feature/ | xargs -r git push origin --delete
