@@ -1,0 +1,16 @@
+name: Issue Triage AI
+on:
+  issues:
+    types: [opened]
+jobs:
+  triage:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v7
+        with:
+          script: |
+            const body = context.payload.issue.body || '';
+            let label = 'question';
+            if (/bug|error|fail/i.test(body)) label = 'bug';
+            else if (/feature|request|enhancement/i.test(body)) label = 'enhancement';
+            github.rest.issues.addLabels({...context.repo, issue_number: context.issue.number, labels: [label]});
