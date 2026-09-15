@@ -1,0 +1,16 @@
+name: Commit Linter
+on: [pull_request]
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - run: |
+          for c in $(git log --pretty=format:"%s" origin/main..HEAD); do
+            if ! echo "$c" | grep -qE "^(docs|feat|fix|refactor|chore):"; then
+              echo "Bad commit: $c"
+              exit 1
+            fi
+          done
