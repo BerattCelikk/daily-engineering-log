@@ -1,0 +1,21 @@
+name: Issue Auto-Assign
+on:
+  issues:
+    types: [opened]
+jobs:
+  assign:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.issues.addAssignees({
+              ...context.repo,
+              issue_number: context.issue.number,
+              assignees: ['BerattCelikk', 'vKaravelv']
+            });
+            await new Promise(r => setTimeout(r, 86400000));
+            const comments = await github.rest.issues.listComments({...context.repo, issue_number: context.issue.number});
+            if (comments.data.length === 0) {
+              await github.rest.issues.createComment({...context.repo, issue_number: context.issue.number, body: 'Bump: Hala yardıma ihtiyaç var mı?'});
+            }
