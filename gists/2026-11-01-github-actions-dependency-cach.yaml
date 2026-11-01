@@ -1,0 +1,11 @@
+// Archived from Gist: https://gist.github.com/BerattCelikk/ba4d0df479bbd7eb3c4c62b0f1315dbb
+// Topic: GitHub Actions Dependency Cache Optimization
+// Date: 2026-11-01
+
+- name: Cache Go modules
+  uses: actions/cache@v4
+  with:
+    path: ~/go/pkg/mod
+    key: ${{ runner.os }}-go-${{ hashFiles('**/go.sum') }}
+    restore-keys: |
+      ${{ runner.os }}-go-
